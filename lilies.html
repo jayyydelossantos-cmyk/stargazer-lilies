@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little Something For You ♡</title>
+
+<style>
+
+/* =========================================================
+   PINK STARGAZER LILY CONFESSION
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+:root {
+    --pink-light: #ffe5ef;
+    --pink-soft: #ffc4d9;
+    --pink: #f58aaa;
+    --pink-dark: #d9577b;
+    --rose: #b93661;
+    --deep-pink: #8f234d;
+
+    --green: #466044;
+    --green-light: #708d68;
+
+    --shadow: rgba(128, 30, 65, 0.25);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255,255,255,.7),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #ffedf4,
+            #ffd0df 45%,
+            #f9a7c0
+        );
+
+    font-family: 'Poppins', sans-serif;
+    color: var(--deep-pink);
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -5;
+}
+
+
+.glow {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.25);
+
+    filter: blur(60px);
+
+    animation: glowMove 8s ease-in-out infinite alternate;
+}
+
+
+.glow.one {
+    top: 5%;
+    left: 5%;
+}
+
+
+.glow.two {
+    right: 5%;
+    bottom: 5%;
+    animation-delay: 3s;
+}
+
+
+@keyframes glowMove {
+
+    from {
+        transform: translate(0,0) scale(1);
+    }
+
+    to {
+        transform: translate(40px,-30px) scale(1.2);
+    }
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    text-align: center;
+
+    padding-top: 45px;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+.small-title {
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: var(--rose);
+
+    opacity: .8;
+}
+
+
+h1 {
+    margin-top: 8px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(42px, 8vw, 78px);
+
+    font-weight: 600;
+
+    color: var(--deep-pink);
+
+    text-shadow:
+        0 4px 20px rgba(255,255,255,.8);
+}
+
+
+.subtitle {
+    margin-top: -5px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 21px;
+
+    color: #a63b60;
+}
+
+
+/* =========================================================
+   FLOWER GARDEN
+   ========================================================= */
+
+.garden {
+
+    position: relative;
+
+    width: min(900px, 95vw);
+
+    height: 440px;
+
+    margin: 0 auto;
+
+    display: block;
+}
+
+
+/* =========================================================
+   STEMS
+   ========================================================= */
+
+.stem {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 7px;
+
+    border-radius: 100%;
+
+    background:
+        linear-gradient(
+            to right,
+            #385438,
+            #6c8b62,
+            #385438
+        );
+
+    transform-origin: bottom center;
+
+    animation:
+        stemSway 5s ease-in-out infinite;
+}
+
+
+/* LEFT STEM */
+
+.stem-left {
+
+    left: 22%;
+
+    height: 275px;
+
+    animation-delay: 0s;
+}
+
+
+/* CENTER STEM */
+
+.stem-center {
+
+    left: 50%;
+
+    height: 335px;
+
+    animation-delay: 0s;
+}
+
+
+/* RIGHT STEM */
+
+.stem-right {
+
+    left: 78%;
+
+    height: 275px;
+
+    animation-delay: 0s;
+}
+
+
+@keyframes stemSway {
+
+    0%,100% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+}
+
+
+/* =========================================================
+   LEAVES
+   ========================================================= */
+
+.leaf {
+
+    position: absolute;
+
+    width: 100px;
+    height: 34px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #385438,
+            #78966f
+        );
+
+    border-radius:
+        100% 0 100% 0;
+
+    opacity: .95;
+}
+
+
+.leaf-left {
+
+    left: -85px;
+
+    top: 100px;
+
+    transform: rotate(25deg);
+}
+
+
+.leaf-right {
+
+    right: -85px;
+
+    top: 145px;
+
+    transform:
+        scaleX(-1)
+        rotate(25deg);
+}
+
+
+/* extra leaves */
+
+.leaf-bottom-left {
+
+    left: -75px;
+
+    top: 190px;
+
+    transform: rotate(12deg);
+}
+
+
+.leaf-bottom-right {
+
+    right: -75px;
+
+    top: 215px;
+
+    transform:
+        scaleX(-1)
+        rotate(12deg);
+}
+
+
+/* =========================================================
+   LILY POSITIONING
+   ========================================================= */
+
+.lily {
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    bottom: 265px;
+
+    opacity: 0;
+
+    transform:
+        translateX(-50%)
+        scale(.05);
+
+    animation:
+        bloom 2.8s cubic-bezier(.2,.8,.2,1)
+        forwards;
+}
+
+
+/* -------------------------
+   LEFT LILY
+------------------------- */
+
+.lily-left {
+
+    left: 22%;
+
+    animation-delay: 0s;
+}
+
+
+/* -------------------------
+   CENTER LILY
+------------------------- */
+
+.lily-center {
+
+    left: 50%;
+
+    width: 215px;
+    height: 215px;
+
+    bottom: 325px;
+
+    animation-delay: 0s;
+}
+
+
+/* -------------------------
+   RIGHT LILY
+------------------------- */
+
+.lily-right {
+
+    left: 78%;
+
+    animation-delay: 0s;
+}
+
+
+@keyframes bloom {
+
+    0% {
+
+        transform:
+            translateX(-50%)
+            scale(.05)
+            rotate(-15deg);
+
+        opacity: 0;
+    }
+
+
+    65% {
+
+        transform:
+            translateX(-50%)
+            scale(1.08)
+            rotate(3deg);
+
+        opacity: 1;
+    }
+
+
+    100% {
+
+        transform:
+            translateX(-50%)
+            scale(1)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   LILY PETALS
+   ========================================================= */
+
+.petal {
+
+    position: absolute;
+
+    width: 55px;
+    height: 105px;
+
+    left: 50%;
+    top: 50%;
+
+    transform-origin: 50% 90%;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+
+            #fff5fa 0%,
+            #ffb1ca 35%,
+            #ed638f 70%,
+            #c93667 100%
+        );
+
+    border-radius:
+        60% 60%
+        45% 45%;
+
+    box-shadow:
+
+        inset
+        0 0 15px
+        rgba(255,255,255,.7),
+
+        0 5px 15px
+        rgba(180,30,80,.18);
+
+    border:
+        1px solid
+        rgba(255,255,255,.55);
+}
+
+
+/* six petals */
+
+.petal:nth-child(1) {
+    transform:
+        translate(-50%,-90%)
+        rotate(0deg);
+}
+
+
+.petal:nth-child(2) {
+    transform:
+        translate(-50%,-90%)
+        rotate(60deg);
+}
+
+
+.petal:nth-child(3) {
+    transform:
+        translate(-50%,-90%)
+        rotate(120deg);
+}
+
+
+.petal:nth-child(4) {
+    transform:
+        translate(-50%,-90%)
+        rotate(180deg);
+}
+
+
+.petal:nth-child(5) {
+    transform:
+        translate(-50%,-90%)
+        rotate(240deg);
+}
+
+
+.petal:nth-child(6) {
+    transform:
+        translate(-50%,-90%)
+        rotate(300deg);
+}
+
+
+/* =========================================================
+   STARGAZER SPECKLES
+   ========================================================= */
+
+.petal::after {
+
+    content: "••••••";
+
+    position: absolute;
+
+    left: 50%;
+    top: 48%;
+
+    transform:
+        translate(-50%,-50%)
+        rotate(90deg);
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color:
+        rgba(135,25,65,.75);
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   LILY CENTER
+   ========================================================= */
+
+.lily-center-dot {
+
+    position: absolute;
+
+    width: 35px;
+    height: 35px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff6bd,
+            #ffd875 45%,
+            #e99a32
+        );
+
+    box-shadow:
+        0 0 20px
+        rgba(255,215,120,.8);
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   STAMENS
+   ========================================================= */
+
+.stamen {
+
+    position: absolute;
+
+    width: 7px;
+    height: 47px;
+
+    left: 50%;
+    top: 50%;
+
+    background: #d89a27;
+
+    transform-origin:
+        bottom center;
+
+    border-radius: 10px;
+
+    z-index: 9;
+}
+
+
+.stamen::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 11px;
+    height: 8px;
+
+    left: -2px;
+    top: 0;
+
+    border-radius: 50%;
+
+    background: #71382d;
+}
+
+
+/* =========================================================
+   STAMEN POSITIONS
+   ========================================================= */
+
+.stamen.s1 {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(20deg);
+}
+
+
+.stamen.s2 {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(-20deg);
+}
+
+
+.stamen.s3 {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(45deg);
+}
+
+
+.stamen.s4 {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(-45deg);
+}
+
+
+/* =========================================================
+   FALLING PETALS
+   ========================================================= */
+
+.falling-petal {
+
+    position: fixed;
+
+    top: -50px;
+
+    width: 15px;
+    height: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb4ca,
+            #e85f89
+        );
+
+    border-radius:
+        100% 0 100% 0;
+
+    opacity: .8;
+
+    z-index: 20;
+
+    animation:
+        fall linear infinite;
+}
+
+
+@keyframes fall {
+
+    0% {
+
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+    }
+
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            translateX(150px)
+            rotate(500deg);
+    }
+
+}
+
+
+/* =========================================================
+   ENVELOPE
+   ========================================================= */
+
+.envelope-area {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: -25px;
+
+    padding-bottom: 80px;
+}
+
+
+.envelope {
+
+    position: relative;
+
+    width:
+        min(420px, 85vw);
+
+    height: 260px;
+
+    cursor: pointer;
+
+    perspective: 1200px;
+
+    filter:
+        drop-shadow(
+            0 25px 30px
+            rgba(120,20,60,.25)
+        );
+}
+
+
+.envelope-body {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffdae6,
+            #f79ab8
+        );
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,.6);
+
+    z-index: 3;
+}
+
+
+.envelope-body::before,
+.envelope-body::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 70%;
+    height: 2px;
+
+    background:
+        rgba(176,45,90,.25);
+}
+
+
+.envelope-body::before {
+
+    left: -10px;
+
+    transform:
+        rotate(31deg);
+
+    transform-origin: left;
+}
+
+
+.envelope-body::after {
+
+    right: -10px;
+
+    transform:
+        rotate(-31deg);
+
+    transform-origin: right;
+}
+
+
+/* =========================================================
+   ENVELOPE FLAP
+   ========================================================= */
+
+.flap {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 150px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffbed2,
+            #ef7fa4
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 100%
+        );
+
+    transform-origin:
+        top center;
+
+    transition:
+        transform 1s
+        cubic-bezier(.2,.8,.2,1);
+
+    z-index: 6;
+}
+
+
+/* =========================================================
+   HEART SEAL
+   ========================================================= */
+
+.seal {
+
+    position: absolute;
+
+    left: 50%;
+    top: 112px;
+
+    transform:
+        translateX(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #e85d88,
+            #a72c59
+        );
+
+    color: white;
+
+    font-size: 24px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(120,20,60,.3);
+
+    z-index: 8;
+
+    transition: .5s;
+}
+
+
+/* =========================================================
+   SMALL LETTER INSIDE ENVELOPE
+   ========================================================= */
+
+.letter {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 20px;
+
+    width: 88%;
+    height: 220px;
+
+    transform:
+        translateX(-50%)
+        translateY(50px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffafd,
+            #fff0f5
+        );
+
+    border-radius: 6px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(100,20,50,.18);
+
+    opacity: 0;
+
+    transition:
+        1s
+        cubic-bezier(.2,.8,.2,1);
+
+    z-index: 2;
+
+    overflow: hidden;
+}
+
+
+.letter h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 28px;
+
+    color: var(--rose);
+
+    margin-bottom: 12px;
+}
+
+
+.letter p {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.55;
+
+    color: #74364e;
+}
+
+
+/* =========================================================
+   OPEN ENVELOPE
+   ========================================================= */
+
+.envelope.open .flap {
+
+    transform:
+        rotateX(180deg);
+}
+
+
+.envelope.open .letter {
+
+    transform:
+        translateX(-50%)
+        translateY(-145px);
+
+    opacity: 1;
+
+    z-index: 7;
+}
+
+
+.envelope.open .seal {
+
+    transform:
+        translateX(-50%)
+        scale(.75);
+
+    opacity: .2;
+}
+
+
+/* =========================================================
+   INSTRUCTION
+   ========================================================= */
+
+.instruction {
+
+    text-align: center;
+
+    margin-top: -35px;
+
+    margin-bottom: 30px;
+
+    font-size: 13px;
+
+    color: #9d3d60;
+
+    animation:
+        breathe 2s
+        ease-in-out infinite;
+}
+
+
+@keyframes breathe {
+
+    0%,100% {
+        opacity: .55;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   FULL LETTER MODAL
+   ========================================================= */
+
+.letter-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(80,10,35,.55);
+
+    backdrop-filter:
+        blur(10px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: .5s;
+
+    z-index: 100;
+}
+
+
+.letter-overlay.show {
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+.full-letter {
+
+    position: relative;
+
+    width:
+        min(650px, 94vw);
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 55px 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffafb,
+            #ffeaf2
+        );
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 30px 80px
+        rgba(50,5,25,.4);
+
+    border:
+        2px solid
+        rgba(255,255,255,.8);
+
+    transform:
+        scale(.75)
+        translateY(30px);
+
+    transition:
+        .6s
+        cubic-bezier(.2,.8,.2,1);
+}
+
+
+.letter-overlay.show .full-letter {
+
+    transform:
+        scale(1)
+        translateY(0);
+}
+
+
+.full-letter::before {
+
+    content: "♡";
+
+    position: absolute;
+
+    top: 15px;
+    left: 25px;
+
+    font-size: 30px;
+
+    color: #e783a1;
+}
+
+
+.full-letter::after {
+
+    content: "♡";
+
+    position: absolute;
+
+    bottom: 15px;
+    right: 25px;
+
+    font-size: 30px;
+
+    color: #e783a1;
+}
+
+
+.full-letter h2 {
+
+    text-align: center;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 42px;
+
+    color: var(--rose);
+
+    margin-bottom: 25px;
+}
+
+
+.confession {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    color: #633346;
+
+    white-space: pre-line;
+}
+
+
+.close-letter {
+
+    display: block;
+
+    margin: 30px auto 0;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ed7098,
+            #bd3f69
+        );
+
+    color: white;
+
+    font-family: Poppins;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(170,40,80,.25);
+
+    transition: .3s;
+}
+
+
+.close-letter:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.03);
+}
+
+
+/* =========================================================
+   SPARKLES
+   ========================================================= */
+
+.sparkle {
+
+    position: fixed;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 12px white,
+        0 0 25px #ff9ebe;
+
+    pointer-events: none;
+
+    animation:
+        sparkle 2s
+        ease-out forwards;
+
+    z-index: 200;
+}
+
+
+@keyframes sparkle {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            scale(.3);
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translateY(-50px)
+            scale(1.5);
+    }
+
+}
+
+
+/* =========================================================
+   MUSIC BUTTON
+   ========================================================= */
+
+.music-button {
+
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.75);
+
+    color: var(--rose);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 20px
+        rgba(120,20,60,.18);
+
+    z-index: 300;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding-top: 30px;
+    }
+
+
+    .garden {
+        height: 360px;
+    }
+
+
+    .lily {
+        width: 130px;
+        height: 130px;
+
+        bottom: 225px;
+    }
+
+
+    .lily-center {
+        width: 145px;
+        height: 145px;
+
+        bottom: 275px;
+    }
+
+
+    .petal {
+        width: 40px;
+        height: 78px;
+    }
+
+
+    .stem {
+        height: 225px;
+    }
+
+
+    .stem-center {
+        height: 270px;
+    }
+
+
+    .leaf {
+        width: 70px;
+        height: 25px;
+    }
+
+
+    .leaf-left {
+        left: -60px;
+    }
+
+
+    .leaf-right {
+        right: -60px;
+    }
+
+
+    .envelope {
+        height: 230px;
+    }
+
+
+    .letter {
+        height: 195px;
+    }
+
+
+    .full-letter {
+        padding: 45px 25px;
+    }
+
+
+    .full-letter h2 {
+        font-size: 34px;
+    }
+
+
+    .confession {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     BACKGROUND
+======================================================= -->
+
+<div class="background">
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+</div>
+
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header class="header">
+    <div class="small-title">
+        PAANO MAINLOVE AND GANGSTANG IT
+    </div>
+
+    <h1>
+        PARA SAU
+    </h1>
+
+</header>
+
+
+<!-- =======================================================
+     THREE STARGAZER LILIES
+======================================================= -->
+
+<section class="garden">
+
+
+    <!-- ===================================================
+         LEFT LILY
+    ==================================================== -->
+
+    <div class="stem stem-left">
+
+        <div class="leaf leaf-left"></div>
+        <div class="leaf leaf-bottom-right"></div>
+
+    </div>
+
+
+    <div class="lily lily-left">
+
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+
+        <div class="lily-center-dot"></div>
+
+        <div class="stamen s1"></div>
+        <div class="stamen s2"></div>
+        <div class="stamen s3"></div>
+        <div class="stamen s4"></div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         CENTER LILY
+    ==================================================== -->
+
+    <div class="stem stem-center">
+
+        <div class="leaf leaf-left"></div>
+        <div class="leaf leaf-right"></div>
+
+        <div class="leaf leaf-bottom-left"></div>
+        <div class="leaf leaf-bottom-right"></div>
+
+    </div>
+
+
+    <div class="lily lily-center">
+
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+
+        <div class="lily-center-dot"></div>
+
+        <div class="stamen s1"></div>
+        <div class="stamen s2"></div>
+        <div class="stamen s3"></div>
+        <div class="stamen s4"></div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         RIGHT LILY
+    ==================================================== -->
+
+    <div class="stem stem-right">
+
+        <div class="leaf leaf-right"></div>
+        <div class="leaf leaf-bottom-left"></div>
+
+    </div>
+
+
+    <div class="lily lily-right">
+
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+
+        <div class="lily-center-dot"></div>
+
+        <div class="stamen s1"></div>
+        <div class="stamen s2"></div>
+        <div class="stamen s3"></div>
+        <div class="stamen s4"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     ENVELOPE INSTRUCTION
+======================================================= -->
+
+<div class="instruction">
+
+    WAG MO MUNA BUKSAN HIYA AKU HIHI
+
+</div>
+
+
+
+<!-- =======================================================
+     ENVELOPE
+======================================================= -->
+
+<section class="envelope-area">
+
+    <div
+        class="envelope"
+        id="envelope"
+        onclick="openEnvelope()"
+    >
+
+        <div class="envelope-body"></div>
+
+
+        <div class="letter">
+
+            <h2>
+                AAAAA ITO NAH
+            </h2>
+
+            <p>
+                uhm ano kac....
+            </p>
+
+        </div>
+
+
+        <div class="flap"></div>
+
+
+        <div class="seal">
+            ♥
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     FULL CONFESSION LETTER
+     
+     ✏️ EDIT YOUR CONFESSION BELOW
+======================================================= -->
+
+<div
+    class="letter-overlay"
+    id="letterOverlay"
+>
+
+    <div class="full-letter">
+
+
+        <!-- CHANGE THE LETTER TITLE HERE -->
+
+        <h2>
+            Dear You, ♡
+        </h2>
+
+
+
+        <!-- =================================================
+             ✏️ YOUR CONFESSION GOES HERE
+             
+             You can completely replace the text below.
+        ================================================== -->
+
+        <div class="confession">
+
+Hi, JISON. ♡
+
+
+I've been wanting to tell you something for
+quite some time, and I finally decided to
+put it into words.
+
+I don't know what you'll think after reading
+this, but I just wanted to be honest about
+how I feel.
+
+I've been admiring you for a while now. And 
+something inside me wants you. I've been 
+noticing that you always liked my notes.
+I hope you'll give me a chance to prove myself
+to you.
+
+I hope I can put all the words I want in this
+small letter, but maybe that's for another chapter.
+There's a lot of words that's going on my head, but 
+this is it for now.
+
+Whatever happens after this, I'm glad that
+I finally got the courage to tell you.
+
+Hev Abi ♡
+
+        </div>
+
+
+
+        <button
+            class="close-letter"
+            onclick="closeLetter(event)"
+        >
+
+            ISARA MO NA NAHIHIYA NA AKO
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =======================================================
+     MUSIC
+======================================================= -->
+
+<button
+    class="music-button"
+    onclick="toggleMusic(event)"
+    id="musicButton"
+>
+    ♫
+</button>
+
+
+
+<script>
+
+
+/* =========================================================
+   OPEN ENVELOPE
+========================================================= */
+
+function openEnvelope() {
+
+    const envelope =
+        document.getElementById("envelope");
+
+
+    envelope.classList.toggle("open");
+
+
+    setTimeout(() => {
+
+        if (
+            envelope.classList.contains("open")
+        ) {
+
+            document
+                .getElementById("letterOverlay")
+                .classList.add("show");
+
+        }
+
+    }, 850);
+
+}
+
+
+
+/* =========================================================
+   CLOSE LETTER
+========================================================= */
+
+function closeLetter(event) {
+
+    event.stopPropagation();
+
+
+    document
+        .getElementById("letterOverlay")
+        .classList.remove("show");
+
+
+    document
+        .getElementById("envelope")
+        .classList.remove("open");
+
+}
+
+
+
+/* =========================================================
+   CLICK OUTSIDE LETTER
+========================================================= */
+
+document
+    .getElementById("letterOverlay")
+    .addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target === this
+            ) {
+
+                closeLetter(event);
+
+            }
+
+        }
+    );
+
+
+
+/* =========================================================
+   FALLING PETALS
+========================================================= */
+
+function createPetal() {
+
+    const petal =
+        document.createElement("div");
+
+
+    petal.className =
+        "falling-petal";
+
+
+    petal.style.left =
+        Math.random() * 100 + "vw";
+
+
+    petal.style.animationDuration =
+        (5 + Math.random() * 7) + "s";
+
+
+    petal.style.animationDelay =
+        Math.random() * 4 + "s";
+
+
+    document.body.appendChild(petal);
+
+
+    setTimeout(() => {
+
+        petal.remove();
+
+    }, 13000);
+
+}
+
+
+setInterval(
+    createPetal,
+    650
+);
+
+
+
+/* =========================================================
+   SPARKLE EFFECT
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        for (
+            let i = 0;
+            i < 5;
+            i++
+        ) {
+
+            const sparkle =
+                document.createElement("div");
+
+
+            sparkle.className =
+                "sparkle";
+
+
+            sparkle.style.left =
+                event.clientX +
+                (Math.random() * 40 - 20) +
+                "px";
+
+
+            sparkle.style.top =
+                event.clientY +
+                (Math.random() * 40 - 20) +
+                "px";
+
+
+            sparkle.style.animationDelay =
+                (Math.random() * .2) +
+                "s";
+
+
+            document.body.appendChild(
+                sparkle
+            );
+
+
+            setTimeout(() => {
+
+                sparkle.remove();
+
+            }, 2000);
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   AMBIENT MUSIC
+========================================================= */
+
+let audioContext;
+
+let musicPlaying = false;
+
+let musicInterval;
+
+
+
+function playNote(
+    frequency,
+    duration
+) {
+
+    if (!audioContext) {
+
+        audioContext =
+            new (
+                window.AudioContext ||
+                window.webkitAudioContext
+            )();
+
+    }
+
+
+    const oscillator =
+        audioContext.createOscillator();
+
+
+    const gain =
+        audioContext.createGain();
+
+
+    oscillator.type =
+        "sine";
+
+
+    oscillator.frequency.value =
+        frequency;
+
+
+    gain.gain.setValueAtTime(
+        0.0001,
+        audioContext.currentTime
+    );
+
+
+    gain.gain.exponentialRampToValueAtTime(
+        0.05,
+        audioContext.currentTime + .05
+    );
+
+
+    gain.gain.exponentialRampToValueAtTime(
+        0.0001,
+        audioContext.currentTime + duration
+    );
+
+
+    oscillator.connect(gain);
+
+    gain.connect(
+        audioContext.destination
+    );
+
+
+    oscillator.start();
+
+
+    oscillator.stop(
+        audioContext.currentTime +
+        duration
+    );
+
+}
+
+
+
+function startMusic() {
+
+    const notes = [
+
+        261.63,
+        329.63,
+        392.00,
+        329.63,
+
+        293.66,
+        349.23,
+        440.00,
+        349.23
+
+    ];
+
+
+    let index = 0;
+
+
+    musicInterval =
+        setInterval(() => {
+
+            playNote(
+                notes[index],
+                1.5
+            );
+
+
+            index =
+                (index + 1) %
+                notes.length;
+
+        }, 900);
+
+}
+
+
+
+function stopMusic() {
+
+    clearInterval(
+        musicInterval
+    );
+
+}
+
+
+
+function toggleMusic(event) {
+
+    event.stopPropagation();
+
+
+    const button =
+        document.getElementById(
+            "musicButton"
+        );
+
+
+    if (!musicPlaying) {
+
+        startMusic();
+
+        musicPlaying = true;
+
+        button.innerHTML =
+            "❚❚";
+
+    }
+
+    else {
+
+        stopMusic();
+
+        musicPlaying = false;
+
+        button.innerHTML =
+            "♫";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
